@@ -193,9 +193,9 @@ module.exports = {
                                     options: [
                                         ['+', 'PLUS'],
                                         ['-', 'MINUS'],
-                                        ['x', 'MULTI'],
+                                        ['*', 'MULTI'],
                                         ['/', 'DIVIDE'],
-                                        ['^', 'POWER'],
+                                        ['**', 'POWER'],
                                     ],
                                     value: 'PLUS',
                                     fontSize: 11,
