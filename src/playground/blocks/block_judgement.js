@@ -333,7 +333,7 @@ module.exports = {
                         type: 'Dropdown',
                         options: [
                             ['=', 'EQUAL'],
-                            ['!=', 'NOT_EQUAL'],
+                            ['≠', 'NOT_EQUAL'],
                             ['>', 'GREATER'],
                             ['<', 'LESS'],
                             ['≥', 'GREATER_OR_EQUAL'],
@@ -492,9 +492,9 @@ module.exports = {
 
                     switch (operator) {
                         case 'EQUAL':
-                            return ((/^ +$/g.test(leftValue) || /^ +$/g.test(rightValue)) && !(leftValue == rightValue && /^ +$/g.test(leftValue)) ? leftValue === rightValue : (leftValue == rightValue && /^ +$/g.test(leftValue)) ? true : leftValue === rightValue;
+                            return (/^ +$/g.test(leftValue) || /^ +$/g.test(rightValue)) && !(leftValue == rightValue && /^ +$/g.test(leftValue)) ? leftValue === rightValue : (leftValue == rightValue && /^ +$/g.test(leftValue)) ? true : leftValue === rightValue;
                         case 'NOT_EQUAL':
-                            return leftValue != rightValue;
+                            return !((/^ +$/g.test(leftValue) || /^ +$/g.test(rightValue)) && !(leftValue == rightValue && /^ +$/g.test(leftValue)) ? leftValue === rightValue : (leftValue == rightValue && /^ +$/g.test(leftValue)) ? true : leftValue === rightValue);
                         case 'GREATER':
                             return leftValue > rightValue;
                         case 'LESS':
