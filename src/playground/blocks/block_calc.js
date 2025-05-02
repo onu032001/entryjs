@@ -193,9 +193,9 @@ module.exports = {
                                     options: [
                                         ['+', 'PLUS'],
                                         ['-', 'MINUS'],
-                                        ['*', 'MULTI'],
+                                        ['x', 'MULTI'],
                                         ['/', 'DIVIDE'],
-                                        ['**', 'POWER'],
+                                        ['^', 'POWER'],
                                     ],
                                     value: 'PLUS',
                                     fontSize: 11,
@@ -268,7 +268,7 @@ module.exports = {
                     js: [],
                     py: [
                         {
-                            syntax: 'math.%1',
+                            syntax: '%1',
                             template: '%1',
                             keyOption: 'calc_const',
                             blockType: 'param',
@@ -283,10 +283,10 @@ module.exports = {
                                         ['π', 'PI'],
                                         ['e', 'E']
                                     ],
-                                    value: 'PLUS',
+                                    value: 'PI',
                                     fontSize: 11,
                                     noArrow: false,
-                                    converter: Entry.block.converters.returnOperator,
+                                    converter: Entry.block.converters.constant,
                                     paramType: 'operator',
                                 },
                                 {

@@ -120,6 +120,7 @@ function getConverters() {
             MINUS: '-',
             MULTI: '*',
             DIVIDE: '/',
+            POWER: '**',
             NOT_EQUAL: '!=',
             '!=': 'NOT_EQUAL',
             '==': 'EQUAL',
@@ -131,6 +132,7 @@ function getConverters() {
             '-': 'MINUS',
             '*': 'MULTI',
             '/': 'DIVIDE',
+            '**': 'POWER',
             AND: 'and',
             OR: 'or',
             QUOTIENT: '//',
@@ -138,6 +140,16 @@ function getConverters() {
         };
         return map[value];
     };
+
+    c.constant = function (key, value) {
+        const map = {
+            PI: 'math.pi',
+            E: 'math.e',
+            'math.pi': 'PI',
+            'math.e': 'E'
+        };
+        return map[value];
+    }
 
     c.returnRawNumberValueByKey = function (key, value) {
         //return String(key).replace(/\D/, '');

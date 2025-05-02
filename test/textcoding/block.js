@@ -149,6 +149,26 @@ describe('EntryPython', function(){
             ));
         });
 
+        describe('exponent or power block test', function() { // variable add ,
+            it("calc_basic" , function() {
+                assert.ok(Test.pythonToBlock(
+                    "('2' ** '3')",
+                    [[{
+                        "type": "calc_basic",
+                        "params": [
+                            {
+                                params : ["2"]
+                            },
+                            "POWER",
+                            {
+                                params : ["3"]
+                            }
+                        ]
+                    }]]
+                ));
+            });
+        });
+        
         it("quotient_and_mod" , function() {
             assert.ok(Test.pythonToBlock(
                 "(11.0002 // 10.0003)",
