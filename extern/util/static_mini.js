@@ -250,6 +250,7 @@ EntryStatic.getAllBlocks = function () {
             category: 'calc',
             blocks: [
                 'calc_basic',
+                'calc_const',
                 'calc_rand',
                 'coordinate_object',
                 'quotient_and_mod',
