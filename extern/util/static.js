@@ -199,6 +199,7 @@ EntryStatic.getAllBlocks = function () {
             category: 'calc',
             blocks: [
                 'calc_basic',
+                'calc_const',
                 'calc_rand',
                 'coordinate_mouse',
                 'coordinate_object',
